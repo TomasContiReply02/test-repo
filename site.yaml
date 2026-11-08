@@ -1,0 +1,9 @@
+---
+- name: Test configuration on K8s pod
+  hosts: ansible-target
+  become: yes
+  tasks:
+    - name: Ensure Nginx is installed
+      apt:
+        name: nginx
+        state: present
